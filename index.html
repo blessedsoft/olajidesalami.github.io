@@ -175,6 +175,117 @@
         .light .bg-tertiary { color: #7c3aed; }
         .light .text-tertiary { color: #7c3aed; }
         .light .bg-tertiary\/10 { background-color: rgba(124, 58, 237, 0.1); }
+
+        @media (max-width: 768px) {
+            .px-margin-desktop {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            section {
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+
+            nav > div,
+            #home > div:last-child,
+            footer > div {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            nav > div {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            nav > div > div:nth-child(2) {
+                display: none;
+            }
+
+            nav > div > div:last-child {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            #home {
+                min-height: auto;
+                padding-top: 96px;
+                padding-bottom: 72px;
+            }
+
+            #home > div:last-child > div,
+            #about > div,
+            #certs > div,
+            #projects .grid,
+            #skills > div > .grid,
+            #contact > div > div {
+                grid-template-columns: 1fr !important;
+                gap: 24px !important;
+            }
+
+            #home h1 {
+                font-size: 2.4rem;
+            }
+
+            #home p {
+                font-size: 1rem;
+            }
+
+            #home .flex.flex-wrap {
+                justify-content: flex-start;
+                margin-bottom: 24px;
+            }
+
+            #home .flex.flex-col.sm\:flex-row {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #home .flex.flex-col.sm\:flex-row a {
+                width: 100%;
+            }
+
+            #home .lg\:col-span-5 {
+                display: none;
+            }
+
+            #about .grid.grid-cols-2,
+            #certs .grid.grid-cols-2,
+            #skills .grid.grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+
+            #skills .grid > .glass-card:nth-child(2),
+            #skills .grid > .glass-card:nth-child(3) {
+                grid-column: span 1;
+            }
+
+            #skills .grid > .glass-card:nth-child(2) .grid {
+                grid-template-columns: 1fr;
+            }
+
+            #contact .max-w-xl {
+                max-width: 100%;
+            }
+
+            #contact input,
+            #contact textarea,
+            #contact button {
+                width: 100%;
+            }
+
+            footer > div {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            footer > div > div:nth-child(2) {
+                justify-content: flex-start;
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body class="font-body-base">
