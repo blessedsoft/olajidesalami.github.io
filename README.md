@@ -1,1 +1,643 @@
-# olajidesalami.github.io
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ROOT@DEVOPS:~$ | Senior Cloud &amp; DevOps Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#ffffff",
+                      "on-tertiary-container": "#ffffff",
+                      "surface-container-high": "#2a2a2a",
+                      "on-surface": "#e5e2e1",
+                      "secondary-fixed": "#47faf3",
+                      "surface": "#131313",
+                      "on-secondary": "#003735",
+                      "outline": "#8b90a0",
+                      "surface-container-lowest": "#0e0e0e",
+                      "secondary-container": "#00ddd6",
+                      "on-tertiary-fixed-variant": "#6600b7",
+                      "primary": "#aec6ff",
+                      "surface-container-highest": "#353534",
+                      "outline-variant": "#414754",
+                      "on-background": "#e5e2e1",
+                      "on-primary-fixed": "#001a43",
+                      "background": "#131313",
+                      "on-secondary-fixed-variant": "#00504d",
+                      "on-secondary-fixed": "#00201f",
+                      "error": "#ffb4ab",
+                      "surface-container-low": "#1c1b1b",
+                      "on-error-container": "#ffdad6",
+                      "tertiary": "#dbb8ff",
+                      "on-surface-variant": "#c1c6d7",
+                      "surface-dim": "#131313",
+                      "primary-container": "#0070f3",
+                      "secondary-fixed-dim": "#00ddd6",
+                      "on-tertiary": "#470083",
+                      "inverse-surface": "#e5e2e1",
+                      "on-tertiary-fixed": "#2b0052",
+                      "surface-tint": "#aec6ff",
+                      "on-primary": "#002e6b",
+                      "tertiary-container": "#994eea",
+                      "tertiary-fixed-dim": "#dbb8ff",
+                      "inverse-primary": "#0059c5",
+                      "on-secondary-container": "#005d5a",
+                      "tertiary-fixed": "#efdbff",
+                      "surface-variant": "#353534",
+                      "primary-fixed-dim": "#aec6ff",
+                      "surface-container": "#201f1f",
+                      "primary-fixed": "#d8e2ff",
+                      "secondary": "#47faf3",
+                      "surface-bright": "#3a3939",
+                      "on-primary-fixed-variant": "#004397",
+                      "inverse-on-surface": "#313030",
+                      "on-error": "#690005",
+                      "error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Inter"],
+                      "code-sm": ["JetBrains Mono"],
+                      "body-base": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "display-lg": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "code-sm": ["14px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "500"}],
+                      "body-base": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .light body {
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        .glass-card {
+            background: rgba(13, 17, 23, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .glass-card:hover {
+            border-color: #0070f3;
+            box-shadow: 0 0 20px rgba(0, 112, 243, 0.15);
+        }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .light .grid-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        }
+
+        .terminal-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: #414754;
+            border-radius: 10px;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+        .node {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #47faf3;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+        .light .node {
+            background: #0059c5;
+        }
+
+        /* Light mode specific accessibility and contrast overrides */
+        .light .text-on-surface { color: #0f172a; }
+        .light .text-on-surface-variant { color: #475569; }
+        .light .bg-surface-container-lowest { background-color: #f1f5f9; }
+        .light .bg-surface { background-color: #ffffff; }
+        .light .border-white\/10 { border-color: rgba(0, 0, 0, 0.1); }
+        .light .bg-white\/5 { background-color: rgba(0, 0, 0, 0.05); }
+        .light .bg-white\/20 { background-color: rgba(0, 0, 0, 0.12); }
+        .light .text-primary { color: #0061e0; }
+        .light .bg-primary-container { background-color: #0059c5; }
+        .light .text-on-primary-container { color: #ffffff; }
+        .light .border-outline\/30 { border-color: rgba(0, 0, 0, 0.15); }
+        .light .hover\:border-primary:hover { border-color: #0061e0; }
+        .light .bg-tertiary { color: #7c3aed; }
+        .light .text-tertiary { color: #7c3aed; }
+        .light .bg-tertiary\/10 { background-color: rgba(124, 58, 237, 0.1); }
+    </style>
+</head>
+<body class="font-body-base">
+<!-- TopNavBar -->
+<nav class="bg-surface/70 dark:bg-surface/70 backdrop-blur-xl border-b border-white/10 dark:border-white/10 shadow-[0_0_15px_rgba(0,112,243,0.1)] docked full-width top-0 sticky z-50 transition-colors">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Logo" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi0p-kqmCiAwYTs20q1vFsEcwpZdlEnX7NqBPKHYYBw5XRzMgyOOHA4RsPs8B9aZCNuVUHkWUpFR77lfOVcT4z3r-Km36ZKUC4LPHHnmeCOODC5X8WW1-fJZQmBIJSLzb3IeW5IjP1QKT3mZ_M-HeD9LMKV33-zCujT6ymbRr4W49Z6SFOiwrLyGqlp3wV_tGJt73vvvnW2h8gaYsJvX22Lxn8YQQgP2jgOrMPePuTKxB1Dvb2rxo7EfPj8hL7ad07vhCPuCAHH_o"/>
+<span class="font-code-sm text-code-sm font-bold text-primary dark:text-secondary-fixed tracking-tighter">ROOT@DEVOPS:~$</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-medium" href="#home">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors" href="#about">About</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors" href="#skills">Skills</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors" href="#projects">Projects</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors" href="#certs">Certs</a>
+<a class="text-on-surface-variant font-medium hover:text-on-surface transition-colors" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-white/10 dark:hover:bg-white/5 transition-colors flex items-center justify-center text-on-surface-variant hover:text-on-surface" id="theme-toggle">
+<span class="material-symbols-outlined" id="theme-toggle-dark-icon">light_mode</span>
+<span class="hidden material-symbols-outlined" id="theme-toggle-light-icon">dark_mode</span>
+</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label-caps text-label-caps hover:bg-opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+                Download Resume
+            </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[95vh] flex flex-col justify-center items-center text-center px-margin-desktop overflow-hidden grid-bg" id="home">
+<!-- Animated Nodes -->
+<div class="node" style="top: 20%; left: 15%;"></div>
+<div class="node" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
+<div class="node" style="top: 40%; left: 85%; animation-delay: 2s;"></div>
+<div class="node" style="top: 80%; left: 20%; animation-delay: 1.5s;"></div>
+<div class="relative z-10 max-w-container-max mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center text-left">
+<div class="flex flex-col items-start lg:col-span-7">
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-6 block tracking-widest uppercase font-bold">System Operational: High Performance</span>
+<h1 class="font-display-lg text-display-lg md:text-[64px] text-on-surface mb-6 leading-[1.1] text-left">Cloud Engineer &amp; <span class="text-primary">DevOps Specialist</span></h1>
+<p class="font-body-base text-body-base text-on-surface-variant mb-10 text-left text-lg max-w-2xl font-medium">Architecting scalable, resilient cloud infrastructures and automating complex deployment lifecycles for high-availability enterprise environments.</p>
+<div class="flex flex-wrap gap-4 mb-12">
+<div class="px-5 py-2.5 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 rounded-full font-code-sm text-code-sm text-primary dark:text-secondary flex items-center gap-2 transition-all hover:bg-white/10 shadow-sm"><span class="material-symbols-outlined text-sm">cloud</span> Azure</div>
+<div class="px-5 py-2.5 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 rounded-full font-code-sm text-code-sm text-primary dark:text-secondary flex items-center gap-2 transition-all hover:bg-white/10 shadow-sm"><span class="material-symbols-outlined text-sm">data_object</span> AWS</div>
+<div class="px-5 py-2.5 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 rounded-full font-code-sm text-code-sm text-primary dark:text-secondary flex items-center gap-2 transition-all hover:bg-white/10 shadow-sm"><span class="material-symbols-outlined text-sm">layers</span> Kubernetes</div>
+<div class="px-5 py-2.5 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/10 rounded-full font-code-sm text-code-sm text-primary dark:text-secondary flex items-center gap-2 transition-all hover:bg-white/10 shadow-sm"><span class="material-symbols-outlined text-sm">terminal</span> Terraform</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<a class="bg-primary-container text-on-primary-container px-10 py-4 rounded-lg font-label-caps text-label-caps hover:shadow-[0_10px_25px_rgba(0,112,243,0.4)] transition-all text-center" href="#projects">View Infrastructure</a>
+<a class="bg-transparent border border-outline/30 dark:border-white/20 text-on-surface px-10 py-4 rounded-lg font-label-caps text-label-caps hover:border-primary transition-all text-center font-bold" href="#contact">Establish Connection</a>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center items-center">
+<div class="relative w-full max-w-[500px] aspect-square group">
+<div class="absolute -inset-4 bg-primary/20 dark:bg-primary/30 rounded-3xl blur-2xl group-hover:bg-primary/40 transition duration-1000"></div>
+<div class="relative h-full w-full rounded-3xl overflow-hidden border-2 border-primary/20 dark:border-primary/40 shadow-2xl">
+<img alt="Professional headshot of a Cloud &amp; DevOps Engineer" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/ADBb0uiPyuV0F_QK5A3nhicaAqqyOxE58k8wEKZg0-be94YLbcpxa11PfNCWLA627mAatocMppXXXGFbgJqCuMUMTiJxQrMY-MNPsltgHsI4fywtNJFTqoK4fRzP5nQhsb6CNFNrd1kyoDhu_ylqAvnH-ZY3MjY00oISJcH1cXGnrfEdmjCGNlxfMLNxFtfPykquNUgogvJKnIfKUWmoY3iZSLkVGApA9QQcFbgadvkI85riAkyb_CH8inzUEZQ"/>
+<!-- Decorative overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-40"></div>
+<div class="absolute top-4 right-4 bg-primary/80 text-on-primary-container text-[10px] font-code-sm px-2 py-1 rounded">STATUS: ONLINE</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-4 block font-bold">IDENTITY_PROFILE</span>
+<h2 class="font-headline-md text-headline-md mb-6 text-3xl">Bridging the Gap Between Code and Infrastructure</h2>
+<p class="font-body-base text-body-base text-on-surface-variant mb-6 leading-relaxed">
+                With over half a decade of experience in Site Reliability Engineering and Cloud Architecture, I specialize in transforming monolithic systems into resilient, microservices-driven infrastructures. My philosophy centers on "Infrastructure as Code" and "You Build It, You Run It."
+            </p>
+<p class="font-body-base text-body-base text-on-surface-variant mb-10 leading-relaxed">
+                I thrive in solving high-stakes availability challenges and optimizing CI/CD pipelines to ensure seamless delivery at scale, currently focusing on multi-cloud orchestration and eBPF-based observability.
+            </p>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="glass-card p-8 rounded-xl text-center border-white/20">
+<span class="font-display-lg text-4xl text-primary block mb-2">50+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-bold">Cloud Projects</span>
+</div>
+<div class="glass-card p-8 rounded-xl text-center border-white/20">
+<span class="font-display-lg text-4xl text-primary dark:text-secondary-fixed block mb-2">12+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-bold">Certifications</span>
+</div>
+<div class="glass-card p-8 rounded-xl text-center border-white/20">
+<span class="font-display-lg text-4xl text-tertiary block mb-2">5+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-bold">Years Exp</span>
+</div>
+<div class="glass-card p-8 rounded-xl text-center border-white/20">
+<span class="font-display-lg text-4xl text-error block mb-2">1k+</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant font-bold">Automated Deploys</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section (Bento Style) -->
+<section class="py-24 px-margin-desktop bg-surface-container-lowest transition-colors" id="skills">
+<div class="max-w-container-max mx-auto">
+<div class="mb-16 text-center">
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-4 block font-bold">TECH_STACK</span>
+<h2 class="font-headline-md text-headline-md text-3xl">Core Competencies</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Cloud Card -->
+<div class="glass-card p-8 rounded-xl md:col-span-1">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">cloud_done</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-lg mb-4">Cloud Platforms</h3>
+<ul class="space-y-4">
+<li class="flex flex-col gap-2">
+<div class="flex justify-between font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">Azure (AKS, Functions, Sentinel)</span>
+<span class="text-primary font-bold">95%</span>
+</div>
+<div class="h-2 bg-on-surface/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[95%]"></div>
+</div>
+</li>
+<li class="flex flex-col gap-2">
+<div class="flex justify-between font-code-sm text-code-sm">
+<span class="text-on-surface font-medium">AWS (EKS, Lambda, RDS)</span>
+<span class="text-primary font-bold">88%</span>
+</div>
+<div class="h-2 bg-on-surface/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</li>
+</ul>
+</div>
+<!-- Containers & Orchestration -->
+<div class="glass-card p-8 rounded-xl md:col-span-2">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary dark:text-secondary-fixed">layers</span>
+</div>
+<span class="font-code-sm text-code-sm bg-primary/20 text-primary dark:bg-secondary/20 dark:text-secondary-fixed px-3 py-1 rounded font-bold">Advanced</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-lg mb-4">Containers &amp; Orchestration</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-4 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/5 hover:border-primary dark:hover:border-secondary transition-all text-center rounded-lg shadow-sm">
+<span class="font-code-sm text-code-sm block text-on-surface font-bold">Kubernetes</span>
+</div>
+<div class="p-4 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/5 hover:border-primary dark:hover:border-secondary transition-all text-center rounded-lg shadow-sm">
+<span class="font-code-sm text-code-sm block text-on-surface font-bold">Docker</span>
+</div>
+<div class="p-4 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/5 hover:border-primary dark:hover:border-secondary transition-all text-center rounded-lg shadow-sm">
+<span class="font-code-sm text-code-sm block text-on-surface font-bold">Helm</span>
+</div>
+<div class="p-4 bg-white/5 dark:bg-white/5 border border-white/10 dark:border-white/5 hover:border-primary dark:hover:border-secondary transition-all text-center rounded-lg shadow-sm">
+<span class="font-code-sm text-code-sm block text-on-surface font-bold">ArgoCD</span>
+</div>
+</div>
+</div>
+<!-- IAC -->
+<div class="glass-card p-8 rounded-xl md:col-span-2">
+<h3 class="font-headline-md text-headline-md text-lg mb-4">Infrastructure as Code</h3>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-2 bg-on-surface/5 dark:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-default border border-transparent hover:border-primary/30">Terraform</span>
+<span class="px-4 py-2 bg-on-surface/5 dark:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-default border border-transparent hover:border-primary/30">Ansible</span>
+<span class="px-4 py-2 bg-on-surface/5 dark:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-default border border-transparent hover:border-primary/30">Pulumi</span>
+<span class="px-4 py-2 bg-on-surface/5 dark:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-default border border-transparent hover:border-primary/30">Bicep</span>
+<span class="px-4 py-2 bg-on-surface/5 dark:bg-surface-container-high rounded font-code-sm text-code-sm text-on-surface-variant hover:text-on-surface transition-colors cursor-default border border-transparent hover:border-primary/30">CloudFormation</span>
+</div>
+</div>
+<!-- Monitoring -->
+<div class="glass-card p-8 rounded-xl md:col-span-1">
+<div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-lg mb-4">Observability</h3>
+<div class="flex flex-col gap-3 font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary dark:bg-secondary-fixed"></span> <span class="font-medium">Prometheus &amp; Grafana</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary dark:bg-secondary-fixed"></span> <span class="font-medium">ELK Stack</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary dark:bg-secondary-fixed"></span> <span class="font-medium">Datadog / NewRelic</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Terminal Section -->
+<section class="py-24 px-margin-desktop bg-surface transition-colors">
+<div class="max-w-4xl mx-auto">
+<div class="bg-[#0b0b0b] rounded-xl border border-white/20 shadow-2xl overflow-hidden">
+<div class="bg-[#1c1c1c] px-4 py-3 flex items-center gap-2 border-b border-white/10">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-red-500"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+<div class="w-3 h-3 rounded-full bg-green-500"></div>
+</div>
+<span class="font-code-sm text-code-sm text-slate-400 ml-4">admin@cloud-terminal:~/infra-deploy</span>
+</div>
+<div class="p-6 font-code-sm text-code-sm h-[400px] overflow-y-auto terminal-scroll text-[#e2e8f0]" id="terminal-content">
+<div class="mb-2 text-slate-500"><span class="text-[#47faf3] font-bold">admin@cloud-terminal</span>:~$ kubectl get nodes</div>
+<div class="mb-4">
+<span class="block">NAME             STATUS   ROLES    AGE   VERSION</span>
+<span class="block">aks-nodepool1    Ready    agent    45d   v1.27.3</span>
+<span class="block">aks-nodepool2    Ready    agent    45d   v1.27.3</span>
+</div>
+<div class="mb-2 text-slate-500"><span class="text-[#47faf3] font-bold">admin@cloud-terminal</span>:~$ terraform plan</div>
+<div class="mb-4 text-[#aec6ff]">
+<span class="block">Plan: 4 to add, 0 to change, 0 to destroy.</span>
+<span class="block">+ module.vnet.azurerm_virtual_network.main</span>
+<span class="block">+ module.aks.azurerm_kubernetes_cluster.prod</span>
+</div>
+<div class="mb-2 text-slate-500"><span class="text-[#47faf3] font-bold">admin@cloud-terminal</span>:~$ helm install prometheus-stack prometheus-community/kube-prometheus-stack</div><div class="mb-4 text-[#aec6ff]">Release "prometheus-stack" has been upgraded. Happy Helming!</div><div class="mb-2 text-slate-500"><span class="text-[#47faf3] font-bold">admin@cloud-terminal</span>:~$ terraform apply -auto-approve</div><div class="mb-4 text-[#aec6ff]">Apply complete! Resources: 14 added, 0 changed, 0 destroyed.</div><div class="mb-2 text-slate-500"><span class="text-[#47faf3] font-bold">admin@cloud-terminal</span>:~$ kubectl logs -f pod/backend-api-78c9</div><div class="mb-4 text-[#aec6ff]">[2024-05-12 10:22:01] INFO Connection established with database.</div><div class="typing-cursor border-l-2 border-[#aec6ff] pl-1 animate-pulse h-5 inline-block"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-lowest transition-colors" id="projects">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-4 block font-bold">PORTFOLIO_OUTPUT</span>
+<h2 class="font-headline-md text-headline-md text-3xl">Enterprise Infrastructure</h2>
+</div>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 hover:gap-4 transition-all font-bold">
+                View Entire Registry <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative bg-[#0D1117] dark:bg-[#0D1117] border border-white/10 dark:border-white/5 rounded-xl overflow-hidden shadow-xl transition-transform hover:-translate-y-2">
+<div class="h-56 relative overflow-hidden">
+<img alt="Azure Migration" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwl61232hV9bVIYKaezu1Wi-PEBgo3jDqNP_f9LnhF8ad2HHmJccZbeqByGmXzEq_zqz-NU0Aak5wKqvcLRIic040bo0YTbBscdQ4KL_ZOXisGRrly2DokL8CfNZyGYaHFajT2SzMNkO_6r_uDi5SZq5JdwHQzn-3fzfRh_2Ijpi3oDcJhsA0XAHSZI6FS42zXYomIoD-k_7nhd3RsY-r3Y_C8P8wtHE_SIcRlce6LGW0hFT1wVEO0eWuFF9zUI6Dk9Pu8dTZRIjo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0D1117] to-transparent"></div>
+</div>
+<div class="p-8">
+<span class="font-code-sm text-code-sm text-primary mb-2 block font-bold">Azure Migration</span>
+<h3 class="font-headline-md text-headline-md text-lg mb-4 text-white">Enterprise Multi-Region Hub</h3>
+<p class="font-body-base text-body-base text-slate-400 text-sm mb-6">
+                        Migration of 200+ microservices from on-prem to Azure using Hub-Spoke VNet architecture and Traffic Manager.
+                    </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">TERRAFORM</span>
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">AZURE</span>
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">BGP</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative bg-[#0D1117] dark:bg-[#0D1117] border border-white/10 dark:border-white/5 rounded-xl overflow-hidden shadow-xl transition-transform hover:-translate-y-2">
+<div class="h-56 relative overflow-hidden">
+<img alt="K8s Observability" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD4LmpC2Ooyhjn5DL9RqKyukz8TikPI9L84ojvpildeIrlJeNE91UAP0oky5pKFwt2MmfkqV5-BbzatcAFcbcVFRYTS6VCoP_AdBa1-2lFNG7cRciMgYJD4P7dQ_SjlwrJT0hSRc2qgU2Qxaej6BhlPeDJ76fKCRI8AxX31Krajs4TQH9k3XHiKOLuRv4UGG2di0FrCD7Hq-a0b5feYhpG_zXlU9x5uDY-TTP8ayBhMaSuTRd6s9_Q8HCGQ_jMC5-G6FsdEOPXMPw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0D1117] to-transparent"></div>
+</div>
+<div class="p-8">
+<span class="font-code-sm text-code-sm text-primary dark:text-secondary-fixed mb-2 block font-bold">Kubernetes SRE</span>
+<h3 class="font-headline-md text-headline-md text-lg mb-4 text-white">K8s Observability Stack</h3>
+<p class="font-body-base text-body-base text-slate-400 text-sm mb-6">
+                        Implementing a comprehensive monitoring stack for EKS clusters using Prometheus, Grafana, and Loki.
+                    </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">PROMETHEUS</span>
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">HELM</span>
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">AWS</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative bg-[#0D1117] dark:bg-[#0D1117] border border-white/10 dark:border-white/5 rounded-xl overflow-hidden shadow-xl transition-transform hover:-translate-y-2">
+<div class="h-56 relative overflow-hidden">
+<img alt="CI/CD Automation" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuxSqon5wmgBljbDO-5mquS7jRn5kf7thbBsbHEP_V64jVhazabrFskgi7biTJXEIlTJx80U-2hMkPfE54druSGoEOf8DWcYhm2syL2pxkrVwp1B75OIymuVhoMTtpXkW4Ry4yLGaKcA-bWuTBjvjOxteLBZ6lhI9lOWAKAeoAMUj66bUM2BVIKX70mNHA2Vggx50T5Z1ucyURAjTHF7pLcLoy1JQv-mepCM8do8viaJBwnfaWKMGEqsW0Fk5ZCFBU7DR6r8Dus0Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0D1117] to-transparent"></div>
+</div>
+<div class="p-8">
+<span class="font-code-sm text-code-sm text-tertiary mb-2 block font-bold">Automation</span>
+<h3 class="font-headline-md text-headline-md text-lg mb-4 text-white">Zero-Touch CI/CD</h3>
+<p class="font-body-base text-body-base text-slate-400 text-sm mb-6">
+                        Full automation of build and deployment processes for a fintech startup using GitHub Actions and ArgoCD.
+                    </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">GITHUBACTIONS</span>
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">ARGOCD</span>
+<span class="px-3 py-1 bg-white/10 rounded text-[10px] font-code-sm text-slate-300 font-bold">CANARY</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications & Experience -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="certs">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Experience Timeline -->
+<div>
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-8 block font-bold">SYSTEM_HISTORY</span>
+<div class="space-y-12">
+<div class="relative pl-8 border-l-2 border-on-surface/20">
+<div class="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_12px_rgba(0,112,243,1)]"></div>
+<span class="font-code-sm text-code-sm text-primary mb-1 block font-bold">2021 — PRESENT</span>
+<h4 class="font-headline-md text-headline-md text-lg text-on-surface">Senior DevOps Engineer</h4>
+<span class="font-body-base text-body-base text-on-surface-variant text-sm block mb-4 font-medium">TechSolutions Infrastructure Corp</span>
+<p class="font-body-base text-body-base text-on-surface-variant text-sm">Led the transformation to GitOps workflows, reducing deployment failure rates by 40% and MTTR by 25%.</p>
+</div>
+<div class="relative pl-8 border-l-2 border-on-surface/20">
+<div class="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-on-surface/30"></div>
+<span class="font-code-sm text-code-sm text-on-surface-variant mb-1 block font-bold">2018 — 2021</span>
+<h4 class="font-headline-md text-headline-md text-lg text-on-surface">Cloud Infrastructure Architect</h4>
+<span class="font-body-base text-body-base text-on-surface-variant text-sm block mb-4 font-medium">Global Cloud Services Ltd</span>
+<p class="font-body-base text-body-base text-on-surface-variant text-sm">Designed and implemented a multi-tenant SaaS foundation on AWS using EKS and Aurora Serverless.</p>
+</div>
+</div>
+</div>
+<!-- Certifications -->
+<div>
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-8 block font-bold">VERIFIED_CREDENTIALS</span>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-6 rounded-lg flex flex-col items-center text-center gap-4 group">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/25 transition-all shadow-inner">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">verified</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-bold">Azure Solutions Architect Expert</span>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-center text-center gap-4 group">
+<div class="w-16 h-16 bg-primary/10 dark:bg-secondary/10 rounded-full flex items-center justify-center group-hover:bg-primary/25 dark:group-hover:bg-secondary/25 transition-all shadow-inner">
+<span class="material-symbols-outlined text-primary dark:text-secondary-fixed text-3xl font-bold">verified</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-bold">AWS Certified DevOps Engineer - Pro</span>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-center text-center gap-4 group">
+<div class="w-16 h-16 bg-tertiary/10 rounded-full flex items-center justify-center group-hover:bg-tertiary/25 transition-all shadow-inner">
+<span class="material-symbols-outlined text-tertiary text-3xl font-bold">verified</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-bold">Certified Kubernetes Administrator (CKA)</span>
+</div>
+<div class="glass-card p-6 rounded-lg flex flex-col items-center text-center gap-4 group">
+<div class="w-16 h-16 bg-error/10 rounded-full flex items-center justify-center group-hover:bg-error/25 transition-all shadow-inner">
+<span class="material-symbols-outlined text-error text-3xl font-bold">verified</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface font-bold">HashiCorp Certified: Terraform Associate</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-lowest transition-colors" id="contact">
+<div class="max-w-container-max mx-auto text-center">
+<span class="font-label-caps text-label-caps text-primary dark:text-secondary-fixed mb-6 block font-bold">COMMUNICATION_LINK</span>
+<h2 class="font-headline-md text-headline-md mb-12 text-3xl text-on-surface">Ready for a Technical Deep Dive?</h2>
+<div class="max-w-xl mx-auto glass-card p-10 rounded-xl">
+<form class="space-y-6 text-left">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant font-bold">USER_IDENTITY</label>
+<input class="w-full bg-white/10 dark:bg-[#0b0b0b] border border-on-surface/20 rounded-lg p-4 font-code-sm text-code-sm text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-on-surface-variant/50" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant font-bold">CONNECTION_ENDPOINT</label>
+<input class="w-full bg-white/10 dark:bg-[#0b0b0b] border border-on-surface/20 rounded-lg p-4 font-code-sm text-code-sm text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-on-surface-variant/50" placeholder="john@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant font-bold">MESSAGE_PAYLOAD</label>
+<textarea class="w-full bg-white/10 dark:bg-[#0b0b0b] border border-on-surface/20 rounded-lg p-4 font-code-sm text-code-sm text-on-surface focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all placeholder:text-on-surface-variant/50" placeholder="Brief about your project or requirement..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-label-caps text-label-caps py-4 rounded-lg hover:shadow-[0_10px_25px_rgba(0,112,243,0.3)] transition-all uppercase tracking-widest font-bold">TRANSMIT_REQUEST</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-12 border-t border-on-surface/10 transition-colors">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex items-center gap-3">
+<span class="font-code-sm text-code-sm text-primary dark:text-secondary-fixed font-bold">DEVOPS_ENGINEER // BUILT FOR SCALE</span>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-code-sm hover:text-primary dark:hover:text-secondary-fixed transition-colors font-medium" href="#">GitHub_Repo</a>
+<a class="text-on-surface-variant font-code-sm hover:text-primary dark:hover:text-secondary-fixed transition-colors font-medium" href="#">LinkedIn_Profile</a>
+<a class="text-on-surface-variant font-code-sm hover:text-primary dark:hover:text-secondary-fixed transition-colors font-medium" href="#">System_Status</a>
+</div>
+<div class="text-on-surface-variant font-code-sm text-sm font-medium">
+            © 2024 DEVOPS_ENGINEER // BUILT FOR SCALE
+        </div>
+</div>
+</footer>
+<script>
+    // Theme Toggle Functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+    const htmlElement = document.documentElement;
+
+    function toggleTheme() {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            htmlElement.classList.add('light');
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+            localStorage.setItem('theme', 'light');
+        } else {
+            htmlElement.classList.remove('light');
+            htmlElement.classList.add('dark');
+            lightIcon.classList.add('hidden');
+            darkIcon.classList.remove('hidden');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Initialize theme based on preference
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+        htmlElement.classList.remove('dark');
+        htmlElement.classList.add('light');
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', toggleTheme);
+
+    // Micro-interaction for terminal
+    const commands = [
+        { cmd: "helm install prometheus-stack prometheus-community/kube-prometheus-stack", output: "Release \"prometheus-stack\" has been upgraded. Happy Helming!" },
+        { cmd: "terraform apply -auto-approve", output: "Apply complete! Resources: 14 added, 0 changed, 0 destroyed." },
+        { cmd: "kubectl logs -f pod/backend-api-78c9", output: "[2024-05-12 10:22:01] INFO Connection established with database." }
+    ];
+
+    const terminalContent = document.getElementById('terminal-content');
+    let cmdIdx = 0;
+
+    function addCommand() {
+        if (cmdIdx >= commands.length) return;
+        
+        const divCmd = document.createElement('div');
+        divCmd.className = "mb-2 text-slate-500";
+        divCmd.innerHTML = `<span class="text-[#47faf3] dark:text-secondary-fixed font-bold">admin@cloud-terminal</span>:~$ ${commands[cmdIdx].cmd}`;
+        
+        const divOut = document.createElement('div');
+        divOut.className = "mb-4 text-[#aec6ff]";
+        divOut.textContent = commands[cmdIdx].output;
+        
+        terminalContent.insertBefore(divCmd, terminalContent.lastElementChild);
+        terminalContent.insertBefore(divOut, terminalContent.lastElementChild);
+        
+        cmdIdx++;
+        terminalContent.scrollTop = terminalContent.scrollHeight;
+    }
+
+    setInterval(addCommand, 4000);
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+</body></html>
