@@ -175,6 +175,22 @@
         .light .bg-tertiary { color: #7c3aed; }
         .light .text-tertiary { color: #7c3aed; }
         .light .bg-tertiary\/10 { background-color: rgba(124, 58, 237, 0.1); }
+        .light nav .md\:flex a {
+            color: #0f172a !important;
+        }
+
+        .light nav .md\:flex a:hover {
+            color: #0059c5 !important;
+        }
+
+        .light nav .md\:flex a.text-primary {
+            color: #0059c5 !important;
+            background: rgba(0, 89, 197, 0.08);
+            border-color: rgba(0, 89, 197, 0.22);
+            border-radius: 9999px;
+            padding: 0.4rem 0.85rem;
+            margin: -0.4rem -0.15rem;
+        }
 
         #mobile-nav-menu {
             overflow: hidden;
@@ -188,6 +204,42 @@
             max-height: 320px;
             opacity: 1;
             transform: translateY(0);
+        }
+
+        #mobile-nav-menu {
+            background: rgba(13, 17, 23, 0.92);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        html.light #mobile-nav-menu {
+            background: rgba(255, 255, 255, 0.98);
+            border-top: 1px solid rgba(15, 23, 42, 0.12);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+        }
+
+        #mobile-nav-menu a {
+            color: #e5e2e1 !important;
+            font-weight: 600;
+        }
+
+        html.light #mobile-nav-menu a {
+            color: #0f172a !important;
+        }
+
+        html.light #mobile-nav-toggle {
+            background: rgba(255, 255, 255, 1);
+            border-color: rgba(15, 23, 42, 0.24);
+            color: #0f172a;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+        }
+
+        html.light #mobile-nav-toggle:hover {
+            background: rgba(226, 232, 240, 1);
+            border-color: rgba(15, 23, 42, 0.32);
+        }
+
+        html.light #mobile-nav-toggle .material-symbols-outlined {
+            color: #0f172a;
         }
 
         @media (max-width: 768px) {
@@ -252,7 +304,15 @@
             }
 
             #home .lg\:col-span-5 {
-                display: none;
+                display: flex !important;
+                justify-content: center;
+                margin-top: 24px;
+            }
+
+            #home .lg\:col-span-5 .relative {
+                width: min(100%, 320px);
+                max-width: 320px;
+                margin: 0 auto;
             }
 
             #about .grid.grid-cols-2,
